@@ -4,12 +4,10 @@
 <title>Alô Mundo</title>
 </head>
 <body>
- 
 Nome: <input id="nome">
 Sobrenome: <input id="sobrenome">
 <button id="alo">Diga Alô!</button>
 <hr>
-
 <div id="result"></div>
 <script>
 function diga_alo() {
@@ -18,7 +16,6 @@ function diga_alo() {
     var html = 'Alô <b>' + fname + '</b> ' + lname;
     document.getElementById('result').innerHTML = html;
 }
- 
 document.getElementById('alo').addEventListener('click', diga_alo);
 </script> 
 </body>
