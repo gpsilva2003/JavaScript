@@ -1,13 +1,11 @@
 # JavaScript
 
-Este repositório contém o arquivo com o tutorial sobre JavaScript.
+Este repositório contém os exemplos do tutorial sobre JavaScript, disponível em [JavaScript](.doc/JavaScript.pdf).
 
-Adicionalmente, os exemplos apresentados no livro estão disponíveis nos seguintes diretórios:
+Os exxemploes estão disponíveis nos seguintes diretórios:
     
-    - cap2
-    - cap3
-    - cap4
+    - [cap2](./cap2)
+    - [cap3](./cap3)
+    - [cap4](./cap4)
 
 
- 
- 
