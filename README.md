@@ -1,6 +1,6 @@
 # JavaScript
 
-Este repositório contém os exemplos do tutorial sobre JavaScript, disponível em [JavaScript](./doc/JavaScript.pdf).
+Este repositório contém os exemplos do tutorial sobre JavaScript, disponível em [JavaScript](./JavaScript.pdf).
 
 Os exxemplos estão disponíveis nos seguintes diretórios:
     
