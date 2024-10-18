@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat com Socket.IO</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    ul { list-style-type: none; padding: 0; }
+    li { padding: 8px; margin-bottom: 5px; background-color: #f3f3f3; border-radius: 5px; }
+    input { padding: 10px; width: 80%; margin-right: 5px; }
+    button { padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Chat com Socket.IO</h1>
+  <ul id="messages"></ul>
+  <form id="form" action="">
+    <input id="message" autocomplete="off" placeholder="Digite uma mensagem..." /><button>Enviar</button>
+  </form>
+
+  <script>
+    $(function() {
+      var socket = io(); // Conecta com o servidor
+
+      // Envia a mensagem quando o formulário é enviado
+      $('#form').submit(function(e) {
+        e.preventDefault(); // Evita o comportamento padrão de recarregar a página
+        var msg = $('#message').val();
+        socket.emit('chat message', msg); // Envia a mensagem para o servidor
+        $('#message').val(''); // Limpa o campo de mensagem
+        return false;
+      });
+
+      // Recebe a mensagem do servidor e exibe na lista
+      socket.on('chat message', function(msg) {
+        $('#messages').append($('<li>').text(msg));
+      });
+    });
+  </script>
+</body>
+</html>
